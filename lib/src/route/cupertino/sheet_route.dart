@@ -75,7 +75,8 @@ class _CupertinoSheetDecorationBuilder extends StatelessWidget {
             ),
             child: MediaQuery.removePadding(
               context: context,
-              removeTop: true,
+              // Do not remove meidaQuery top.
+              // removeTop: true,
               child: child,
             ),
           );
@@ -150,7 +151,8 @@ class CupertinoSheetRoute<T> extends SheetRoute<T> {
       initialExtent: initialExtent,
       decorationBuilder: decorationBuilder,
       fit: fit,
-      maxExtent: mediaQuery.size.height - topMargin,
+      // Just full page.
+      // maxExtent: mediaQuery.size.height - topMargin,
       physics: effectivePhysics,
       controller: sheetController,
       child: child,
